@@ -1,0 +1,37 @@
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js" defer></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=329056883774806";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?45"></script>
+<script type="text/javascript">
+  VK.init({apiId: 2702749, onlyWidgets: true});
+</script>
+<script type="text/javascript">
+var VK_likes_count = 0;
+function VK_likes_process() {
+  $('.vk-like').not('.vk-like_processed').each(function() {
+    var like_id = 'vk_like_' + VK_likes_count;
+    $(this).addClass('vk-like_processed').attr('id', like_id);
+    VK.Widgets.Like(like_id, {pageUrl: $(this).data('url'), type: "button", height: 20});
+    VK_likes_count++;
+  });
+}
+jQuery(function($){ VK_likes_process(); });
+</script>

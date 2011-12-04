@@ -1,0 +1,13 @@
+development: &development
+  adapter: mysql2
+  username: root
+  password:
+  database: <%= app_name %>
+  encoding: UTF8
+
+production:
+  <<: *development
+
+test:
+  <<: *development
+  database: <%= app_name %>_test

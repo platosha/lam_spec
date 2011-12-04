@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <p>Не хватает прав для совершения этого действия.</p>
+<% else %>
+  <p>Необходимо <%= link_to "войти", '#', :onclick => 'LAM.login(); return false;' %> или <%= link_to "зарегистрироваться", LamAuth.signup_url, :target => '_blank' %>.</p>
+<% end %>

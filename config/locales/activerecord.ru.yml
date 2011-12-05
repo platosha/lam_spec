@@ -14,10 +14,5 @@ ru:
     #           invalid_email: имеет неправильный формат
             
     attributes:
-      nomination:
-        city: Город
-        question: Вопрос перед голосованием
-        picture_file_name: Иконка
-      pair:
-        result1: Результат
+
       

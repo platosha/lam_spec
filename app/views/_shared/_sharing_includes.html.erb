@@ -15,13 +15,13 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=329056883774806";
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=<%= t("app_settings.fb_app_id") %>";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?45"></script>
 <script type="text/javascript">
-  VK.init({apiId: 2702749, onlyWidgets: true});
+  VK.init({apiId: <%= t("app_settings.vk_app_id") %>, onlyWidgets: true});
 </script>
 <script type="text/javascript">
 var VK_likes_count = 0;

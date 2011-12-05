@@ -23,6 +23,8 @@
   <%= csrf_meta_tags %>
   
   <%= yield :head %>
+  
+  <%= render("_shared/google_analytics") if Rails.env.production? %>
 </head>
 <body>
   <div id="lam-root"></div>

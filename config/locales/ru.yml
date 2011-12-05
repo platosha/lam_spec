@@ -1,1 +1,10 @@
 ru:
+  date:
+    formats:
+      default: '%d %B %Y'
+      short: '%d %B'
+      
+  app_settings:
+    fb_app_id: 329056883774806
+    vk_app_id: 2702749
+    analytics_id: UA-...

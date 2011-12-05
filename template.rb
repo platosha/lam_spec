@@ -44,6 +44,7 @@ end
   app/assets/images/og_logo_lookatme.png
   app/controllers/pages_controller.rb
   app/helpers/application_helper.rb
+  app/views/_shared/_google_analytics.html.erb
   app/views/_shared/_meta_properties.html.erb
   app/views/_shared/_sharing_includes.html.erb
   app/views/_shared/login_required.html.erb

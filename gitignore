@@ -4,7 +4,6 @@
 .idea
 .rbenv-version
 .rvmrc
-config/auth.yml
 config/database.yml
 config/initializers/*_local.rb
 config/lam_auth.yml

@@ -1,9 +1,7 @@
 #!/bin/sh
 
-<% %w{1 2}.each do |i| %>
-<% ip = "188.127.242.24#{i}" %>
-ssh <%= app_name %>@<%= ip %> 'git clone ssh://git@git.lookatme.ru:58022/<%= app_name %>.git <%= app_name %>-git'
-ssh <%= app_name %>@<%= ip %> 'cp <%= app_name %>-git/config/database.yml.production <%= app_name %>-git/config/database.yml'
-ssh <%= app_name %>@<%= ip %> 'cp <%= app_name %>-git/config/lam_auth.yml.production <%= app_name %>-git/config/lam_auth.yml'
-ssh <%= app_name %>@<%= ip %> 'ln -s <%= app_name %>-git/public <%= app_name %>-git/public/<%= app_name %>'
-<% end %>
+git clone ssh://git@git.lookatme.ru:58022/<%= app_name %>.git <%= app_name %>-git
+cd <%= app_name %>-git
+cp config/database.yml.production config/database.yml
+cp config/lam_auth.yml.production config/lam_auth.yml
+ln -s public public/<%= app_name %>

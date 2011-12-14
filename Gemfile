@@ -16,6 +16,7 @@ group :assets do
   gem 'compass', "~> 0.12.alpha.2"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'therubyracer', :require => 'v8', :platforms => :ruby
 end
 
 group :development, :test do

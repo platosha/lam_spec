@@ -9,7 +9,7 @@ gem 'inherited_resources'
 gem 'paperclip'
 gem 'simple_form'
 gem 'validates_as_email_address'
-gem 'lam_auth', '~>0.2.0'
+gem 'lam_auth', '~>1.0.0'
 
 group :assets do
   gem 'sass-rails', "~> 3.1.0"

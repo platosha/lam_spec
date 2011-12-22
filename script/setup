@@ -5,3 +5,4 @@ cd <%= app_name %>-git
 cp config/database.yml.production config/database.yml
 cp config/lam_auth.yml.production config/lam_auth.yml
 ln -s public public/<%= app_name %>
+

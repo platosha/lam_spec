@@ -54,6 +54,7 @@ end
   app/views/layouts/global.html.erb
   app/views/pages/index.html.erb
   config/initializers/ids.rb
+  config/initializers/image_tag_extensions.rb
   config/initializers/locale.rb
   config/initializers/paperclip.rb
   config/initializers/permalink.rb

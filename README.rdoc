@@ -1,7 +1,7 @@
 Шаблон спецпроекта для Look At Me
 
   git clone git://github.com/macovsky/lam_spec.git
-  rails new APP_NAME --skip-bundle -d mysql --skip-test-unit -m lam_spec/template.rb
+  rails new APP_NAME --skip-bundle -d mysql --skip-test-unit --old-style-hash -m lam_spec/template.rb
   
 В качестве имени приложения удобно выбрать его папку на http://specials.lookatme.ru, потом, в случае необходимости переименовать.
   

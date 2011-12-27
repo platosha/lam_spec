@@ -76,7 +76,6 @@ end
   config/routes.rb
   config/deploy.rb
   config/database.yml
-  script/setup
 }.each do |f|
   template File.join(@template, f), f
 end

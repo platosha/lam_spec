@@ -1,0 +1,149 @@
+@import "compass/reset", "compass/css3", "compass/typography";
+
+@import "global";
+
+
+/* Basic HTML & Typography
+---------------------------------------- */
+
+body {
+	@include reset-box-model;
+	position:relative; z-index:1;
+	background:$body-background-color;
+	font-family:$base-font-family;
+	font-size:87.5%; line-height:1.2143em;
+	color:$body-text-color;
+	}
+
+
+#{headings()} {
+	@include reset-box-model;
+	@include pl-reset-font-size;
+	@include font-family-condensed;
+	}
+
+
+@mixin pl-margins($font-size: $base-font-size, $line-height: $base-line-height, $paragraph-lines: .5, $list-item-lines: .5) {
+	p, ol, ul, dl, table {
+		margin:pl-lines-em($paragraph-lines, $font-size, $line-height) 0;
+		}
+	li {
+		margin:pl-lines-em($list-item-lines, $font-size, $line-height) 0;
+		}
+	}
+@include pl-margins;
+
+
+$active-color: $body-text-color;
+a,
+a:visited,
+a:active,
+a:hover {
+	color:$body-link-color;
+	text-decoration:none;
+	}
+a:hover {
+	text-decoration:underline;
+	color:lighten($body-link-color, 40%);
+	}
+a.g-immediate {
+	border-bottom:1px dashed $body-link-color;
+	}
+a.g-immediate:hover {
+	border-bottom-color:lighten($body-link-color, 40%);
+	text-decoration:none;
+	}
+a.g-immediate.g-active {
+	color:$active-color;
+	border-bottom-color:$body-text-color;
+	}
+.b-link {
+	
+	}
+a.b-link {
+	@include unstyled-link;
+	color:$body-link-color;
+	cursor:pointer;
+	.b-link__i {
+		color:$body-link-color;
+		text-decoration:none;
+		}
+	&:hover .b-link__i {
+		text-decoration:underline;
+		}
+	}
+.g-active,
+a.g-active {
+	cursor:default;
+	}
+a.g-active:hover,
+a.g-active:hover .b-link__i {
+	text-decoration:none;
+	}
+
+.b-icon {
+	display:inline-block;
+	vertical-align:middle;
+	font-family:'WebSymbolsRegular';
+	font-size:29px; line-height:30px;
+	text-transform:none;
+	}
+
+
+small {
+	@include pl-font-size(11px);
+	@include pl-margins(11px);
+	}
+em {
+	font-style:italic;
+	}
+
+.g-disabled {
+	color:lighten($body-text-color, 20%);
+	}
+
+
+.g-line,
+.g-clear-after,
+.clearfix {
+	@include clearfix;
+	}
+
+
+/* Look At Me panel normalize
+---------------------------------------- */
+
+#lam-root { min-width:1000px; min-height:$panel-height; background:#000; }
+* html #lam-root { height:$panel-height; }
+#lam-root .lam-panel .list-topics { padding:0; }
+.lam-panel ol,
+.lam-panel ul,
+.lam-panel li {
+	@include reset-box-model;
+	}
+
+
+/* Layout
+---------------------------------------- */
+
+
+
+/* Common classes
+---------------------------------------- */
+
+.b-menu {
+}
+
+
+/* Layout elements
+---------------------------------------- */
+
+.b-logo {
+	a, img {
+		display:block;
+		}
+	}
+
+
+/* Content elements
+---------------------------------------- */

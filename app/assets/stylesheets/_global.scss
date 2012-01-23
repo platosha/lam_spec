@@ -1,0 +1,77 @@
+/* Global defs
+---------------------------------------- */
+
+$base-font-family: Helvetica, 'Liberation Sans', Arial, sans-serif !default;
+$base-font-size: 14px;
+$base-line-height: 1.25;
+
+$body-background-color: #ecece5 !default;
+$body-text-color: #000 !default;
+$body-link-color: #000 !default;
+
+$min-width: 980px !default;
+$min-height: 500px !default;
+
+$page-sheet-width: 980px !default;
+$page-content-width: 980px !default;
+
+$panel-height: 67px !default;
+
+
+@mixin clearfix {
+	/* for IE 6/7 */
+	*zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+	/* non-JS fallback */
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+		}
+	&:after {
+		clear: both;
+		}
+	}
+
+@mixin pl-inline-block-list-container {
+	letter-spacing:-.25em;
+	white-space:nowrap;
+	}
+
+@mixin pl-inline-block-list-item {
+	display:inline-block; vertical-align:top;
+	*display:inline; *zoom:1;
+	letter-spacing:0;
+	white-space:normal;
+	}
+
+@mixin pl-inline-block-list {
+	&  {
+		@include pl-inline-block-list-container;
+		}
+	li {
+		@include pl-inline-block-list-item;
+		}
+	}
+
+
+@function pl-px-em($to-size, $from-size: $base-font-size) {
+	@return 1em * $to-size / $from-size;
+	}
+
+@function pl-lines-em($lines: 1, $font-size: $base-font-size, $line-height: $base-line-height) {
+	@return #{ round($lines * $font-size * $line-height) / $font-size }em;
+	}
+
+@mixin pl-font-size($to-size, $from-size: $base-font-size) {
+	font-size: pl-px-em($to-size, $from-size);
+	@include pl-line-height($to-size);
+	}
+
+@mixin pl-line-height($font-size: $base-font-size, $line-height: $base-line-height) {
+	line-height: pl-lines-em(1, $font-size, $line-height);
+	}
+
+@mixin pl-reset-font-size {
+	@include pl-font-size($base-font-size, $base-font-size);
+	}
